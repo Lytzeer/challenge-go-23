@@ -246,6 +246,8 @@ func PrintCombN(n int) {
 													z01.PrintRune(rune(m))
 													z01.PrintRune(rune(n))
 													z01.PrintRune(rune(o))
+													z01.PrintRune(rune(p))
+													z01.PrintRune(rune(q))
 													z01.PrintRune('\n')
 												} else {
 													z01.PrintRune(rune(i))
@@ -255,6 +257,8 @@ func PrintCombN(n int) {
 													z01.PrintRune(rune(m))
 													z01.PrintRune(rune(n))
 													z01.PrintRune(rune(o))
+													z01.PrintRune(rune(p))
+													z01.PrintRune(rune(q))
 													z01.PrintRune(',')
 													z01.PrintRune(' ')
 												}
