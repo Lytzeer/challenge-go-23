@@ -1,4 +1,4 @@
-package main
+package student
 
 func IsNegative(nb int) string {
 	if nb < 0 {
