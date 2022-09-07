@@ -1,10 +1,10 @@
 package main
 
-import(
+import (
 	"github.com/01-edu/z01"
 )
 
-func main(){
+func main() {
 	z01.PrintRune('0')
 	z01.PrintRune('1')
 	z01.PrintRune('2')
@@ -15,5 +15,4 @@ func main(){
 	z01.PrintRune('7')
 	z01.PrintRune('8')
 	z01.PrintRune('9')
-	z01.PrintRune('\n')
 }
