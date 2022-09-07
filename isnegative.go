@@ -1,13 +1,9 @@
 package student
 
-import "github.com/01-edu/z01"
-
 func IsNegative(nb int) string {
 	if nb < 0 {
-		z01.PrintRune('T')
-		z01.PrintRune('\n')
+		return "T"
 	} else {
-		z01.PrintRune('F')
-		z01.PrintRune('\n')
+		return "F"
 	}
 }
