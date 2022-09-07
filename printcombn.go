@@ -16,8 +16,8 @@ func PrintCombN(n int) {
 		}
 	}
 	if n == 2 {
-		for i := '0'; i <= '9'; i++ {
-			for j := '1'; j <= '8'; j++ {
+		for i := '0'; i <= '8'; i++ {
+			for j := '1'; j <= '9'; j++ {
 				if i == '8' && j == '9' {
 					z01.PrintRune(rune(i))
 					z01.PrintRune(rune(j))
