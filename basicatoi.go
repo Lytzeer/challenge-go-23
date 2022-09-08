@@ -5,9 +5,7 @@ func BasicAtoi(s string) int {
 	n := 1
 	slice := []rune{}
 	for _, ch := range s {
-		if ch != '0' {
-			slice = append(slice, rune(ch))
-		}
+		slice = append(slice, rune(ch))
 	}
 	for i := len(slice) - 1; len(slice) != 0; i-- {
 		atoi += int(slice[i]-48) * n
