@@ -18,7 +18,7 @@ func Atoi(s string) int {
 		}
 	}
 	if slice[0] == '-' || slice[0] == '+' {
-		slice = slice[1:len(slice)]
+		slice = slice[1:]
 	}
 	for i := len(slice) - 1; len(slice) != 0; i-- {
 		if slice[i] == '-' || slice[i] == '+' {
