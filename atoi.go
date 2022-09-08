@@ -4,6 +4,9 @@ func Atoi(s string) int {
 	atoi := 0
 	n := 1
 	var isnegative bool
+	if s == "" {
+		return 0
+	}
 	if s[0] == '-' {
 		isnegative = true
 	} else {

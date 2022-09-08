@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
+	fmt.Println(piscine.Atoi(""))
 	fmt.Println(piscine.Atoi("12345"))
 	fmt.Println(piscine.Atoi("0000000012345"))
 	fmt.Println(piscine.Atoi("012 345"))
