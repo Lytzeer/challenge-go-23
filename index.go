@@ -4,6 +4,8 @@ func Index(s string, toFind string) int {
 	rep := -1
 	if toFind < s {
 		return -1
+	} else if len(toFind) == 0 {
+		return 0
 	} else {
 		for i := 0; i < len(s); i++ {
 			for j := 0; j < len(toFind); j++ {
