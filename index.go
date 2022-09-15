@@ -15,7 +15,9 @@ func Index(s string, toFind string) int {
 					} else {
 						var mot string
 						for k := 0; k < len(toFind); k++ {
-							mot += string(string(s[i+k]))
+							if k+i < len(s) {
+								mot += string(s[i+k])
+							}
 						}
 						if mot == toFind {
 							return i
