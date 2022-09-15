@@ -18,7 +18,7 @@ func Index(s string, toFind string) int {
 							mot += string(string(s[i+k]))
 						}
 						if mot == toFind {
-							rep = i
+							return i
 						}
 					}
 				}
