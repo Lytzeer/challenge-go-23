@@ -8,8 +8,6 @@ import (
 
 func main() {
 	arguments := os.Args[0]
-	z01.PrintRune('.')
-	z01.PrintRune('/')
 	for _, ch := range arguments {
 		z01.PrintRune(ch)
 	}
