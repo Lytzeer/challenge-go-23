@@ -12,7 +12,9 @@ func main() {
 	for i := len(arguments[0]) - 1; rune(arguments[0][i]) != rune(92); i-- {
 		index = i
 	}
-	for i := index - 1; rune(arguments[0][i]) != rune(46); i++ {
+	z01.PrintRune('.')
+	z01.PrintRune('/')
+	for i := index; rune(arguments[0][i]) != rune(46); i++ {
 		z01.PrintRune(rune(arguments[0][i]))
 	}
 }
