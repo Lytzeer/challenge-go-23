@@ -8,7 +8,13 @@ import (
 
 func main() {
 	arguments := os.Args[0]
-	for _, ch := range arguments {
-		z01.PrintRune(ch)
+	var index int
+	for i := len(arguments); rune(arguments[i]) != rune(92); i-- {
+		index = i
+	}
+	z01.PrintRune('.')
+	z01.PrintRune('/')
+	for i := index; i < len(arguments)-4; i++ {
+		z01.PrintRune(rune(arguments[i]))
 	}
 }
