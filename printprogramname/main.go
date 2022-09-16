@@ -11,4 +11,5 @@ func main() {
 	for i := 2; i < len(arguments); i++ {
 		z01.PrintRune(rune(arguments[i]))
 	}
+	z01.PrintRune('\n')
 }
