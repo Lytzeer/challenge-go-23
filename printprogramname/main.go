@@ -9,6 +9,8 @@ import (
 func main() {
 	arguments := os.Args[0]
 	for _, ch := range arguments {
-		z01.PrintRune(ch)
+		if ch != rune(92) && ch != rune(46) {
+			z01.PrintRune(ch)
+		}
 	}
 }
