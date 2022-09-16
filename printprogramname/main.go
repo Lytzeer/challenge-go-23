@@ -14,7 +14,7 @@ func main() {
 	}
 	z01.PrintRune('.')
 	z01.PrintRune('/')
-	for i := index; i < len(arguments)-4; i++ {
+	for i := index; i < len(arguments); i++ {
 		z01.PrintRune(rune(arguments[i]))
 	}
 }
