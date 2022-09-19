@@ -1,9 +1,11 @@
 package main
 
-import "piscine"
+import (
+	"fmt"
+	"piscine"
+)
 
 func main() {
-	piscine.PrintNbrInOrder(321)
-	piscine.PrintNbrInOrder(0)
-	piscine.PrintNbrInOrder(321)
+	test := []string{"Hello", "how", "are", "you?"}
+	fmt.Println(piscine.ConcatParams(test))
 }
