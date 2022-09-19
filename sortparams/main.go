@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"os"
 
 	"github.com/01-edu/z01"
@@ -17,10 +16,8 @@ func main() {
 		for j := 0; j < len(n_tab); j++ {
 			min := n_tab[i]
 			if n_tab[i] < n_tab[j] {
-				fmt.Println(n_tab)
 				n_tab[i] = n_tab[j]
 				n_tab[j] = min
-				fmt.Println(n_tab)
 			}
 		}
 	}
