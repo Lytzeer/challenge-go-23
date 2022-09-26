@@ -39,7 +39,7 @@ func main() {
 	z01.PrintRune('=')
 	z01.PrintRune(' ')
 	for i := 0; i < len(tab_x); i++ {
-		z01.PrintRune(tab_x[i])
+		z01.PrintRune(rune(tab_x[i]))
 	}
 	z01.PrintRune(',')
 	z01.PrintRune(' ')
@@ -48,7 +48,7 @@ func main() {
 	z01.PrintRune('=')
 	z01.PrintRune(' ')
 	for i := 0; i < len(tab_y); i++ {
-		z01.PrintRune(tab_y[i])
+		z01.PrintRune(rune(tab_y[i]))
 	}
 	z01.PrintRune('\n')
 }
