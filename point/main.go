@@ -20,18 +20,6 @@ func printStr(s string) {
 	z01.PrintRune('\n')
 }
 
-func Atoi(s string) int {
-	atoi := 0
-	for _, ch := range s {
-		if ch >= '0' && ch <= '9' {
-			atoi = atoi*10 + int(ch-'0')
-		} else {
-			return 0
-		}
-	}
-	return atoi
-}
-
 func main() {
 	points := &point{}
 
@@ -42,17 +30,13 @@ func main() {
 	z01.PrintRune(' ')
 	z01.PrintRune('=')
 	z01.PrintRune(' ')
-	for _, ch := range x {
-		z01.PrintRune(ch)
-	}
+	printStr(x)
 	z01.PrintRune(',')
 	z01.PrintRune(' ')
 	z01.PrintRune('y')
 	z01.PrintRune(' ')
 	z01.PrintRune('=')
 	z01.PrintRune(' ')
-	for _, ch := range y {
-		z01.PrintRune(ch)
-	}
+	printStr(y)
 	z01.PrintRune('\n')
 }
