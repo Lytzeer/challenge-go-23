@@ -51,5 +51,4 @@ func main() {
 		z01.PrintRune(tab_y[i])
 	}
 	z01.PrintRune('\n')
-	printStr(word)
 }
