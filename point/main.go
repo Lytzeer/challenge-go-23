@@ -50,9 +50,9 @@ func main() {
 		nb := points.y % 10
 		liste = append(liste, rune(nb+48))
 		points.y /= 10
-
 	}
 	for i := len(liste) - 1; i >= 0; i-- {
 		z01.PrintRune(liste[i])
 	}
+	z01.PrintRune('\n')
 }
