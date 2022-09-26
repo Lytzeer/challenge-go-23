@@ -9,26 +9,28 @@ import (
 func main() {
 	arguments := os.Args
 	if len(arguments) > 1 && arguments[1] == "--upper" {
+		tab := []rune{'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'}
 		for i := 2; i < len(arguments); i++ {
 			a := Atoi(arguments[i])
 			if a == 0 {
-				z01.PrintRune(rune(32))
+				z01.PrintRune(' ')
 			} else if a <= 26 {
-				z01.PrintRune(rune(a + 64))
+				z01.PrintRune(tab[a-1])
 			} else {
-				z01.PrintRune(rune(32))
+				z01.PrintRune(' ')
 			}
 		}
 		z01.PrintRune(rune('\n'))
 	} else if len(arguments) > 1 {
+		tab := []rune{'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'}
 		for i := 1; i < len(arguments); i++ {
 			a := Atoi(arguments[i])
 			if a == 0 {
-				z01.PrintRune(rune(32))
+				z01.PrintRune(' ')
 			} else if a <= 26 {
-				z01.PrintRune(rune(a + 96))
+				z01.PrintRune(tab[a-1])
 			} else {
-				z01.PrintRune(rune(32))
+				z01.PrintRune(' ')
 			}
 		}
 		z01.PrintRune(rune('\n'))
@@ -37,37 +39,12 @@ func main() {
 
 func Atoi(s string) int {
 	atoi := 0
-	n := 1
-	var isnegative bool
-	if s == "" {
-		return 0
-	}
-	if s[0] == '-' {
-		isnegative = true
-	} else {
-		isnegative = false
-	}
-	slice := []rune{}
 	for _, ch := range s {
-		if ch != '0' && ch != '1' && ch != '2' && ch != '3' && ch != '4' && ch != '5' && ch != '6' && ch != '7' && ch != '8' && ch != '9' && ch != '+' && ch != '-' {
-			return 0
+		if ch >= '0' && ch <= '9' {
+			atoi = atoi*10 + int(ch-'0')
 		} else {
-			slice = append(slice, rune(ch))
-		}
-	}
-	if slice[0] == '-' || slice[0] == '+' {
-		slice = slice[1:]
-	}
-	for i := len(slice) - 1; len(slice) != 0; i-- {
-		if slice[i] == '-' || slice[i] == '+' {
 			return 0
 		}
-		atoi += int(slice[i]-48) * n
-		slice = slice[:len(slice)-1]
-		n *= 10
-	}
-	if isnegative == true {
-		atoi *= -1
 	}
 	return atoi
 }
