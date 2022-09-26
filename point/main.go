@@ -43,7 +43,7 @@ func main() {
 	z01.PrintRune('=')
 	z01.PrintRune(' ')
 	for _, ch := range x {
-		z01.PrintRune(ch)
+		z01.PrintRune(ch + 48)
 	}
 	z01.PrintRune(',')
 	z01.PrintRune(' ')
@@ -52,7 +52,7 @@ func main() {
 	z01.PrintRune('=')
 	z01.PrintRune(' ')
 	for _, ch := range y {
-		z01.PrintRune(ch)
+		z01.PrintRune(ch + 48)
 	}
 	z01.PrintRune('\n')
 }
