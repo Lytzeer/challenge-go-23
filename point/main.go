@@ -34,7 +34,6 @@ func main() {
 	for _, ch := range y {
 		tab_y = append(tab_y, ch)
 	}
-	word := "x = " + x + ", y = " + y
 	z01.PrintRune('x')
 	z01.PrintRune(' ')
 	z01.PrintRune('=')
