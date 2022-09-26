@@ -39,8 +39,6 @@ func main() {
 	for i := len(listee) - 1; i >= 0; i-- {
 		z01.PrintRune(listee[i])
 	}
-	z01.PrintRune(rune(points.x))
-
 	z01.PrintRune(rune(','))
 	z01.PrintRune(rune(32))
 	z01.PrintRune(rune('y'))
@@ -57,5 +55,4 @@ func main() {
 	for i := len(liste) - 1; i >= 0; i-- {
 		z01.PrintRune(liste[i])
 	}
-	z01.PrintRune(rune(points.y))
 }
