@@ -24,31 +24,39 @@ func main() {
 	points := &point{}
 
 	setPoint(points)
-	x := string(points.x)
-	y := string(points.y)
-	tab_x := []rune{}
-	tab_y := []rune{}
-	for _, ch := range x {
-		tab_x = append(tab_x, ch)
+
+	z01.PrintRune(rune('x'))
+	z01.PrintRune(rune(32))
+	z01.PrintRune(rune('='))
+	z01.PrintRune(rune(32))
+	listee := []rune{}
+	for points.x > 0 {
+		nb := points.x % 10
+		listee = append(listee, rune(nb+48))
+		points.x /= 10
+
 	}
-	for _, ch := range y {
-		tab_y = append(tab_y, rune(ch))
+	for i := len(listee) - 1; i >= 0; i-- {
+		z01.PrintRune(listee[i])
 	}
-	z01.PrintRune('x')
-	z01.PrintRune(' ')
-	z01.PrintRune('=')
-	z01.PrintRune(' ')
-	for i := 0; i < len(tab_x); i++ {
-		z01.PrintRune(tab_x[i])
+	z01.PrintRune(rune(points.x))
+
+	z01.PrintRune(rune(','))
+	z01.PrintRune(rune(32))
+	z01.PrintRune(rune('y'))
+	z01.PrintRune(rune(32))
+	z01.PrintRune(rune('='))
+	z01.PrintRune(rune(32))
+	liste := []rune{}
+	for points.y > 0 {
+		nb := points.y % 10
+		liste = append(liste, rune(nb+48))
+		points.y /= 10
+
 	}
-	z01.PrintRune(',')
-	z01.PrintRune(' ')
-	z01.PrintRune('y')
-	z01.PrintRune(' ')
-	z01.PrintRune('=')
-	z01.PrintRune(' ')
-	for i := 0; i < len(tab_y); i++ {
-		z01.PrintRune(tab_y[i])
+	for i := len(liste) - 1; i >= 0; i-- {
+		z01.PrintRune(liste[i])
 	}
+	z01.PrintRune(rune(points.y))
 	z01.PrintRune('\n')
 }
