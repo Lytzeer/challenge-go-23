@@ -24,8 +24,8 @@ func main() {
 	points := &point{}
 
 	setPoint(points)
-	x := string(string(points.x))
-	y := string(string(points.y))
+	x := string(points.x)
+	y := string(points.y)
 	tab_x := []rune{}
 	tab_y := []rune{}
 	for _, ch := range x {
