@@ -26,6 +26,31 @@ func main() {
 	setPoint(points)
 	x := string(string(points.x))
 	y := string(string(points.y))
+	tab_x := []rune{}
+	tab_y := []rune{}
+	for _, ch := range x {
+		tab_x = append(tab_x, ch)
+	}
+	for _, ch := range y {
+		tab_y = append(tab_y, ch)
+	}
 	word := "x = " + x + ", y = " + y
+	z01.PrintRune('x')
+	z01.PrintRune(' ')
+	z01.PrintRune('=')
+	z01.PrintRune(' ')
+	for i := 0; i < len(tab_x); i++ {
+		z01.PrintRune(tab_x[i])
+	}
+	z01.PrintRune(',')
+	z01.PrintRune(' ')
+	z01.PrintRune('y')
+	z01.PrintRune(' ')
+	z01.PrintRune('=')
+	z01.PrintRune(' ')
+	for i := 0; i < len(tab_y); i++ {
+		z01.PrintRune(tab_y[i])
+	}
+	z01.PrintRune('\n')
 	printStr(word)
 }
