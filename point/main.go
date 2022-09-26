@@ -36,14 +36,14 @@ func main() {
 	points := &point{}
 
 	setPoint(points)
-	x := string(points.x)
-	y := string(points.y)
+	x := string(string(points.x))
+	y := string(string(points.y))
 	z01.PrintRune('x')
 	z01.PrintRune(' ')
 	z01.PrintRune('=')
 	z01.PrintRune(' ')
 	for _, ch := range x {
-		z01.PrintRune(ch + 48)
+		z01.PrintRune(ch)
 	}
 	z01.PrintRune(',')
 	z01.PrintRune(' ')
@@ -52,7 +52,7 @@ func main() {
 	z01.PrintRune('=')
 	z01.PrintRune(' ')
 	for _, ch := range y {
-		z01.PrintRune(ch + 48)
+		z01.PrintRune(ch)
 	}
 	z01.PrintRune('\n')
 }
