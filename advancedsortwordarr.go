@@ -5,9 +5,14 @@ func AdvancedSortWordArr(a []string, f func(a, b string) int) {
 		for j := 0; j < len(a); j++ {
 			min := a[i]
 			if f(a[i], a[j]) == 1 {
-				a[j] = a[i]
-				a[i] = min
+				a[i] = a[j]
+				a[j] = min
 			}
+		}
+	}
+	for i := 0; i < len(a); i++ {
+		for j := len(a) - 1; j > 0; j-- {
+			a[i], a[j] = a[j], a[i]
 		}
 	}
 }
