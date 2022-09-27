@@ -43,7 +43,7 @@ func main() {
 				rep -= Atoi(args[2])
 			} else if args[1] == "/" {
 				if Atoi(args[0]) == 0 && (Atoi(args[0]) < Atoi(args[2])) {
-					os.Stdout.WriteString("0")
+					os.Stdout.WriteString("-1")
 					os.Stdout.WriteString("\n")
 					return
 				} else {
