@@ -2,7 +2,7 @@ package piscine
 
 func ListPushFront(l *List, data interface{}) {
 	val := &NodeL{Data: data}
-	if l.Tail == nil {
+	if l.Head == nil {
 		l.Head = val
 		l.Head = l.Head
 	} else {
