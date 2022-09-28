@@ -6,6 +6,7 @@ func ListPushFront(l *List, data interface{}) {
 		l.Tail = l.Head
 		l.Head = val
 	} else {
-		val.Next, l.Head = l.Head, val
+		n := val
+		n.Next, l.Head = l.Head, val
 	}
 }
