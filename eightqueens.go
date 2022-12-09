@@ -1,6 +1,6 @@
 package piscine
 
-import "fmt"
+import "github.com/01-edu/z01"
 
 const n = 8 // nombre de reines à placer
 
@@ -61,14 +61,19 @@ func main() {
 		for i := 0; i < n; i++ {
 			for j := 0; j < n; j++ {
 				if cols[i] == j {
-					fmt.Print("Q ")
+					z01.PrintRune('Q')
+					z01.PrintRune(' ')
 				} else {
-					fmt.Print(". ")
+					z01.PrintRune('.')
+					z01.PrintRune(' ')
 				}
 			}
-			fmt.Println()
+			z01.PrintRune('\n')
 		}
 	} else {
-		fmt.Println("Aucune solution trouvée")
+		rep := "Aucune solution trouvée"
+		for _, letter := range rep {
+			z01.PrintRune(letter)
+		}
 	}
 }
